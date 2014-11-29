@@ -21,13 +21,8 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 
-# Krait/QCOM optimizations
+# QCOM optimizations
 TARGET_USE_KRAIT_QCOM_OPTIMIZATION := true
-TARGET_USE_KRAIT_PLD_SET := true
-TARGET_KRAIT_BIONIC_PLDOFFS := 10
-TARGET_KRAIT_BIONIC_PLDTHRESH := 10
-TARGET_KRAIT_BIONIC_BBTHRESH := 64
-TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 TARGET_NO_BOOTLOADER := true
 
@@ -36,7 +31,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geehrc lpj=67677 user_debug=31
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
-# Try to build the kernel
+# build the kernel
 TARGET_KERNEL_SOURCE := kernel/lge/gee
 TARGET_KERNEL_CONFIG := gee_defconfig
 
@@ -151,7 +146,6 @@ HAVE_ADRENO_SOURCE:= false
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
-
 MALLOC_IMPL := dlmalloc
 
 -include vendor/lge/gee/BoardConfigVendor.mk
@@ -171,7 +165,6 @@ TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
-TARGET_RECOVERY_INITRC := device/lge/geehrc/recovery/init.rc
 TW_BRIGHTNESS_PATH := /sys/class/backlight/lm3530/brightness
 TW_MAX_BRIGHTNESS := 255
 
