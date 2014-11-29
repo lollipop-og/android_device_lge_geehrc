@@ -21,13 +21,8 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 
-# Krait/QCOM optimizations
+# QCOM optimizations
 TARGET_USE_KRAIT_QCOM_OPTIMIZATION := true
-TARGET_USE_KRAIT_PLD_SET := true
-TARGET_KRAIT_BIONIC_PLDOFFS := 10
-TARGET_KRAIT_BIONIC_PLDTHRESH := 10
-TARGET_KRAIT_BIONIC_BBTHRESH := 64
-TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 TARGET_NO_BOOTLOADER := true
 
@@ -36,7 +31,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geehrc lpj=67677 user_debug=31
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
-# Try to build the kernel
+# build the kernel
 TARGET_KERNEL_SOURCE := kernel/lge/gee
 TARGET_KERNEL_CONFIG := gee_defconfig
 
@@ -177,7 +172,6 @@ TW_MAX_BRIGHTNESS := 255
 
 #MultiROM config. MultiROM also uses parts of TWRP config
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/lge/geehrc/mr_init_devices.c
 MR_RD_ADDR := 0x82000000
 MR_DPI := hdpi
 MR_DPI_FONT := 216
