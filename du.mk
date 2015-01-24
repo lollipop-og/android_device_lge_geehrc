@@ -2,15 +2,15 @@
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common DU stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geehrc
-PRODUCT_NAME := cm_geehrc
+PRODUCT_NAME := du_geehrc
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE

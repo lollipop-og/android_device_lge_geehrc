@@ -1,5 +1,5 @@
 # remote storage process (runs as nobody)
-type rmt, domain, rmt_placeholder;
+type rmt, domain;
 type rmt_exec, exec_type, file_type;
 
 # Started by init
@@ -18,8 +18,6 @@ allow rmt rmt_block_device:blk_file { getattr rw_file_perms };
 allow rmt shared_log_device:chr_file rw_file_perms;
 
 allow rmt block_device:dir search;
-allow rmt kmem_device:chr_file rw_file_perms;
-allow rmt self:capability sys_rawio;
 
 allow rmt self:socket create_socket_perms;
 allow rmt cgroup:dir { create add_name };
