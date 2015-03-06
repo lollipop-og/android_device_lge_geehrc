@@ -3,15 +3,14 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/axxion/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geehrc
-PRODUCT_NAME := omni_geehrc
+PRODUCT_NAME := axxion_geehrc
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
