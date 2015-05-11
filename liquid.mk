@@ -3,7 +3,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common_phone.mk)
+$(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
