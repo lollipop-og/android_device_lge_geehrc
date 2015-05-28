@@ -193,10 +193,10 @@ PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	libaudio-resampler
 	
-PRODUCT_PACKAGES += \
-	FMRadio \
-	qcom.fmradio \
-	libqcomfm_jni
+#PRODUCT_PACKAGES += \
+#	FMRadio \
+#	qcom.fmradio \
+#	libqcomfm_jni
 
 # Voice processing
 PRODUCT_PACKAGES += libqcomvoiceprocessing
