@@ -256,11 +256,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	 telephony.lteOnCdmaDevice=1 \
+	telephony.lteOnCdmaDevice=1 \
         telephony.lteOnGsmDevice=1 \
         ro.telephony.default_network=10 \
         ro.ril.def.preferred.network=10 \
-	 ril.subscription.types=NV,RUIM
+	ril.subscription.types=NV,RUIM
          
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
