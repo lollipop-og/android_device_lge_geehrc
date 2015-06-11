@@ -50,7 +50,8 @@ PRODUCT_COPY_FILES += \
 	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	device/lge/geehrc/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh
+	device/lge/geehrc/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh \
+	device/lge/geehrc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
         device/lge/geehrc/fetch-swv:system/bin/fetch-swv
