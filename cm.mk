@@ -15,8 +15,12 @@ PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/mako:4.4.2/KOT49H/937116:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.4.2 KOT49H 937116 release-keys"
-
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	USER=Dadi11 \
+	PRODUCT_NAME=geehrc_open_eu \
+	BUILD_FINGERPRINT=lge/geehrc_open_eu/geehrc:4.4.2/KOT49I.E97520a/E97520a.1403273885:user/release-keys \
+	PRIVATE_BUILD_DESC="geehrc_open_eu-user 4.4.2 KOT49I.E97520a E97520a.1403273885 release-keys"
+	
 # Enable Torch
 PRODUCT_PACKAGES += Torch
 
