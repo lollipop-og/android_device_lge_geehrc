@@ -20,3 +20,6 @@ type rmt_block_device, dev_type;
 type shared_log_device, dev_type;
 
 type power_control_device, dev_type;
+
+#Misc partition
+type misc_partition, dev_type;

@@ -1,0 +1,12 @@
+#for  property starting with hw
+allow init_shell  system_prop:property_service set ;
+
+#for access to set BT property
+allow init_shell  bluetooth_prop:property_service set;
+
+#most of the default properties are set by init_shell
+allow init_shell  default_prop:property_service set;
+
+allow init_shell shell_exec:file execute_no_trans;
+
+allow init_shell block_device:blk_file { getattr setattr };

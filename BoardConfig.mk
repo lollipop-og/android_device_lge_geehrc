@@ -109,6 +109,7 @@ BOARD_SEPOLICY_DIRS += \
        device/lge/geehrc/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+       bluetooth.te
        bluetooth_loader.te \
        bridge.te \
        camera.te \
@@ -118,7 +119,10 @@ BOARD_SEPOLICY_UNION += \
        file.te \
        file_contexts \
        hostapd.te \
+       init.te \
+       init_shell.te \
        kickstart.te \
+       kernel.te \
        mediaserver.te \
        mpdecision.te \
        netmgrd.te \
@@ -128,12 +132,15 @@ BOARD_SEPOLICY_UNION += \
        rild.te \
        rmt.te \
        sensors.te \
+       servicemanager.te \
        surfaceflinger.te \
        system_server.te \
        tee.te \
        te_macros \
        thermald.te \
-       ueventd.te
+       ueventd.te \
+       vold.te \
+       zygote.te
 
 
 BOARD_CHARGER_ENABLE_SUSPEND := true

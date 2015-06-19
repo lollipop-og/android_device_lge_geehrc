@@ -1,0 +1,3 @@
+allow zygote shell_data_file:dir search;
+allow zygote servicemanager:binder call;
+allow zygote system_server:binder { transfer call };
