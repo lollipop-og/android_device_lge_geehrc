@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/init.geehrc.rc:root/init.geehrc.rc \
-	device/lge/geehrc/init.gee.fm.sh:root/init.gee.fm.sh \
 	device/lge/geehrc/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
 	device/lge/geehrc/fstab.geehrc:root/fstab.geehrc \
 	device/lge/geehrc/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
