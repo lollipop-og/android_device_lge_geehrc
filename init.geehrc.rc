@@ -484,13 +484,6 @@ service fetch-swv /system/bin/fetch-swv
     class late_start
     oneshot
 
-service fm_dl /system/bin/sh /system/etc/init.gee.fm.sh
-    class late_start
-    user root
-    group system qcom_oncrpc
-    disabled
-    oneshot
-
 # on property:gsm.sim.state=READY
 #    start diag_mdlog
 
