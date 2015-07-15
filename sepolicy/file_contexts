@@ -23,6 +23,7 @@
 ## Radio related
 # modem driver
 /dev/mdm                               u:object_r:radio_device:s0
+
 # high speed inter-chip controls
 /dev/hsicctl[0-3]                      u:object_r:radio_device:s0
 # mux controller
