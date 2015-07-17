@@ -19,6 +19,7 @@
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="4" />
         <Setting name="supports-multiple-secure-codecs" value="false" />
+        <Setting name="supports-secure-with-non-secure-codec" value="false" />
     </Settings>
     <Include href="media_codecs_google_telephony.xml" />
     <Encoders>
