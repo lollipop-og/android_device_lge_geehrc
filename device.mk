@@ -282,6 +282,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
+# set SELinux property value
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # Hardware codecs
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.hw.aac.encoder=true
