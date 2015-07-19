@@ -290,9 +290,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc
 
-# QRNGD
-PRODUCT_PACKAGES += qrngd
-
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # This is the geehrc-specific audio package
