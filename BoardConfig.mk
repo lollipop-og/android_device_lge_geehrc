@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_SPECIFIC_HEADER_PATH := device/lge/geehrc/include
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
