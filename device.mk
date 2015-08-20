@@ -30,6 +30,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PACKAGES := \
     lights.geehrc \
+    camera.geehrc \
     libwpa_client \
     hostapd \
     dhcpcd.conf \
