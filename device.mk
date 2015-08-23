@@ -254,6 +254,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=1 \
         telephony.lteOnGsmDevice=1 \
+        ro.telephony.ril_class=geesprRIL \
         ro.telephony.default_network=10 \
         ro.ril.def.preferred.network=10 \
 	ril.subscription.types=NV,RUIM

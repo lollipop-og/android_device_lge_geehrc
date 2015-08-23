@@ -107,6 +107,8 @@ TARGET_PROVIDES_GPS_LOC_API := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/geehrc
 
+BOARD_RIL_CLASS := ../../../device/lge/geehrc/ril/
+
 BOARD_SEPOLICY_DIRS += \
        device/lge/geehrc/sepolicy
 
