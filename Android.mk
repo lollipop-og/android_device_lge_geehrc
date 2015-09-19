@@ -63,5 +63,16 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9310; \
 	ln -sf /data/misc/audio/mbhc.bin \
 	$(TARGET_OUT_ETC)/firmware/wcd9310/wcd9310_mbhc.bin)
 
+# Symlink firmware from /persist
+FIRMWARE_IMAGES := dsps.mdt dsps.b00 dsps.b01 dsps.b02 dsps.b03 dsps.b04 dsps.b05
+FIRMWARE_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_IMAGES)))
+$(FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_SYMLINKS)
+
 endif
 
