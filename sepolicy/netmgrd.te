@@ -32,6 +32,9 @@ qmux_socket(netmgrd)
 # TODO:  Convert to direct exec of /system/bin/ip and any other helpers.
 allow netmgrd shell_exec:file rx_file_perms;
 
+allow netmgrd proc_net:file r_file_perms;
+allow netmgrd proc_net:dir r_dir_perms;
+
 # Runs /system/bin/ip addr flush dev <device> commands.
 allow netmgrd system_file:file rx_file_perms;
 
