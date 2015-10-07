@@ -283,8 +283,9 @@ on post-fs-data
     restorecon /sys/devices/platform/mipi_lgit.1537/kgamma_b
     restorecon /sys/devices/platform/mipi_lgit.1537/kgamma_apply
 
-    # disable diag port
-    rm /dev/diag
+    #Modem logging collection
+    mkdir /data/diag_logs 0777 system system
+    chmod 666 /dev/diag
 
 on charger
     trigger charger-fs
