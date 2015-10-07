@@ -7,7 +7,7 @@ init_daemon_domain(conn_init)
 domain_auto_trans(init, conn_init_exec, conn_init)
 
 # Runs init.mako.wifi.sh
-allow conn_init shell_exec:file { entrypoint read };
+allow conn_init shell_exec:file rx_file_perms;
 allow conn_init conn_init_exec:file rx_file_perms;
 allow conn_init devpts:chr_file { read write };
 

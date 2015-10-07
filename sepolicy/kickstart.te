@@ -4,9 +4,6 @@ type kickstart_exec, file_type, exec_type;
 
 init_daemon_domain(kickstart)
 
-# Spawn /system/bin/efsks and /system/bin/ks
-allow kickstart kickstart_exec:file { open execute_no_trans getattr };
-
 allow kickstart self:capability dac_override;
 
 # Let qcks access /dev/mdm node (modem driver)
@@ -30,7 +27,7 @@ allow kickstart radio_efs_file:file r_file_perms;
 allow keystore self:process execmem;
 
 # Run dd from toolbox on firmware files
-allow kickstart shell_exec:file { getattr rx_file_perms entrypoint };
+allow kickstart shell_exec:file rx_file_perms;
 allow kickstart self:process execmem;
 allow kickstart system_file:file execute_no_trans;
 allow kickstart property_socket:sock_file write;
