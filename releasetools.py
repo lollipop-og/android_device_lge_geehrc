@@ -35,6 +35,11 @@ def IncrementalOTA_VerifyEnd(info):
         len(source_radio_img), common.sha1(source_radio_img).hexdigest(),
         len(target_radio_img), common.sha1(target_radio_img).hexdigest()))
 
+def IncrementalOTA_InstallBegin(info):
+  # Reduce the space taken by the journal.
+  info.script.Unmount("/system")
+  info.script.TunePartition("/system", "-O", "^has_journal")
+  info.script.Mount("/system")
 
 def IncrementalOTA_InstallEnd(info):
   try:
