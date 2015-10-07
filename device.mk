@@ -19,6 +19,11 @@
 #
 # Everything in this directory will become public
 
+LOCAL_KERNEL := device/lge/geehrc/kernel
+
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
+
 DEVICE_PACKAGE_OVERLAYS := device/lge/geehrc/overlay
 
 # This device is xhdpi.  However the platform doesn't
