@@ -112,6 +112,9 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
         frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-swap=false
+
 # NFC packages
 PRODUCT_PACKAGES += \
         libnfc \
