@@ -113,40 +113,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/geehrc
 BOARD_SEPOLICY_DIRS += \
        device/lge/geehrc/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-       bluetooth_loader.te \
-       bridge.te \
-       camera.te \
-       conn_init.te \
-       device.te \
-       domain.te \
-       file.te \
-       file_contexts \
-       hci_attach.te \
-       hostapd.te \
-       init.te \
-       kickstart.te \
-       mediaserver.te \
-       mpdecision.te \
-       netd.te \
-       netmgrd.te \
-       property.te \
-       property_contexts \
-       qmux.te \
-       rild.te \
-       rmt.te \
-       sensors.te \
-       servicemanager.te \
-       shell.te \
-       surfaceflinger.te \
-       system_server.te \
-       tee.te \
-       te_macros \
-       thermald.te \
-       ueventd.te \
-       vold.te \
-       zygote.te
-
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
