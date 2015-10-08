@@ -27,10 +27,6 @@ on init
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
 
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-    symlink /sdcard /storage/sdcard0
-
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
     setprop persist.radio.custom_ecc "1"
@@ -38,6 +34,8 @@ on init
     setprop persist.radio.custom_ecc_mcc_ex "{450:111,112,113,119,122,125,127},{724:190},{425:100,101,102}"
     setprop persist.radio.custom_ecc_voice "{515:117},{452:113,114,115}"
     setprop persist.radio.custom_ecc_hard "911,*911,#911,112,999,000,08,118,120,122,110,119,995,111,113,125,127,133"
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
 on charger-fs
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system  /system ro barrier=1
@@ -133,6 +131,8 @@ on boot
 # msm specific files that need to be created on /data
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
+
+    mkdir /data/media 0770 media_rw media_rw
 
 # to observe dnsmasq.leases file for dhcp information of soft ap.
     chown dhcp system /data/misc/dhcp
